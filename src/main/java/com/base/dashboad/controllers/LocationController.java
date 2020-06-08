@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class LocationController {
 	
 	@GetMapping("/location")
-	public String getCountries() {
+	public String getLocation() {
 		return "location";
 	}
 

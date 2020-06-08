@@ -53,7 +53,7 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
+      <a th:href="@{/}" class="logo">Company <span class="lite">Admin</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -311,7 +311,7 @@
 
     <!--sidebar start-->
     <aside>
-      <div id="sidebar" class="nav-collapse ">
+      <div id="sidebar" class="sidebar">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
           <li class="active">
@@ -341,8 +341,8 @@
                       </a>
             <ul class="sub">
               <li><a class="" th:href="@{/vehiclemake }">Vehicle Make</a></li>
-              <li><a class="" th:href="@{/vehicletypes}">Vehicle Types</a></li>
-              <li><a class="" th:href="@{/vehiclemodels}">Vehicle Models</a></li>
+              <li><a class="" th:href="@{/vehicletype}">Vehicle Types</a></li>
+              <li><a class="" th:href="@{/vehiclemodel}">Vehicle Models</a></li>
               <li><a class="" th:href="@{/vehiclestatus}">Status Values</a></li>
             </ul>
           </li>
@@ -354,9 +354,9 @@
                       </a>
             <ul class="sub">
               <li><a class="" th:href="@{/employee}">Employees</a></li>
-              <li><a class="" th:href="@{/clients}">Clients</a></li>
+              <li><a class="" th:href="@{/client}">Clients</a></li>
               <li><a class="" th:href="@{/supplier}">Suppliers</a></li>
-              <li><a class="" th:href="@{/countact}">Contacts</a></li>
+              <li><a class="" th:href="@{/contact}">Contacts</a></li>
               <li><a class="" th:href="@{/user}">User</a></li>
             </ul>
           </li>

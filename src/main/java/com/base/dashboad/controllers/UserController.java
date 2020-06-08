@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
 	
 	@GetMapping("/user")
-	public String getCountries() {
+	public String getUser() {
 		return "user";
 	}
 

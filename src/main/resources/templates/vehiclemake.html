@@ -49,7 +49,7 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
+      <a th:href="@{/}" class="logo">Nice <span class="lite">Admin</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -166,9 +166,9 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="./img/amol.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Greg  Martin</span>
+                                    <span class="from">Amol Kadam</span>
                                     <span class="time">1 min</span>
                                     </span>
                                     <span class="message">
@@ -178,9 +178,9 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini2.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="./img/rohan.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Bob   Mckenzie</span>
+                                    <span class="from">Rohan Patkar</span>
                                     <span class="time">5 mins</span>
                                     </span>
                                     <span class="message">
@@ -190,9 +190,9 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini3.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="./img/manjiee.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Phillip   Park</span>
+                                    <span class="from">Manjiree Nikam</span>
                                     <span class="time">2 hrs</span>
                                     </span>
                                     <span class="message">
@@ -202,9 +202,9 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini4.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="./img/ashish.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Ray   Munoz</span>
+                                    <span class="from">Ashish Kharaode</span>
                                     <span class="time">1 day</span>
                                     </span>
                                     <span class="message">
@@ -268,9 +268,9 @@
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <img alt="" src="./img/avatar-img1.jpg">
                             </span>
-                            <span class="username">Jenifer Smith</span>
+                            <span class="username">Yogesh Nikam</span>
                             <b class="caret"></b>
                         </a>
             <ul class="dropdown-menu extended logout">
@@ -311,7 +311,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
           <li class="">
-            <a class="" href="index.html">
+            <a class="" th:href="@{/}">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
@@ -319,64 +319,77 @@
           <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
-                          <span>Forms</span>
+                          <span>Vehicles</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="form_component.html">Form Elements</a></li>
-              <li><a class="" href="form_validation.html">Form Validation</a></li>
+              <li><a class="" th:href="@{/vehicle}">Vehicle Data</a></li>
+              <li><a class="" th:href="@{/vehiclemaintenance}">Maintenance</a></li>
+              <li><a class="" th:href="@{/vehiclemovement}">Movements</a></li>
+              <li><a class="" th:href="@{/vehiclehire}">Hires</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
-                          <span>UI Fitures</span>
+                          <span>Parameters</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="general.html">Components</a></li>
-              <li><a class="" href="buttons.html">Buttons</a></li>
-              <li><a class="" href="grids.html">Grids</a></li>
+              <li><a class="" th:href="@{/vehiclemake }">Vehicle Make</a></li>
+              <li><a class="" th:href="@{/vehicletype}">Vehicle Types</a></li>
+              <li><a class="" th:href="@{/vehiclemodel}">Vehicle Models</a></li>
+              <li><a class="" th:href="@{/vehiclestatus}">Status Values</a></li>
             </ul>
           </li>
-          <li>
-            <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Widgets</span>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>People</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
+            <ul class="sub">
+              <li><a class="" th:href="@{/employee}">Employees</a></li>
+              <li><a class="" th:href="@{/client}">Clients</a></li>
+              <li><a class="" th:href="@{/supplier}">Suppliers</a></li>
+              <li><a class="" th:href="@{/contact}">Contacts</a></li>
+              <li><a class="" th:href="@{/user}">User</a></li>
+            </ul>
           </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Charts</span>
-
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>HR Settings</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
-
+            <ul class="sub">
+              <li><a class="" th:href="@{/jobtitle}">Job Titles</a></li>
+              <li><a class="" th:href="@{/employeetype}">Employee Type</a></li>
+            </ul>
           </li>
 
           <li class="sub-menu">
             <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>Tables</span>
+                          <i class="icon_desktop"></i>
+                          <span>Accounts</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="basic_table.html">Basic Table</a></li>
+              <li><a class="" th:href="@{/invoice}">Invoice</a></li>
+              <li><a class="" th:href="@{/invoicestatus}">Suppliers</a></li>
             </ul>
           </li>
 
-          <li class="sub-menu ">
+          <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
+                          <span>Globals</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="profile.html">Profile</a></li>
-              <li><a class="" href="login.html"><span>Login Page</span></a></li>
-              <li><a class="" href="contact.html"><span>Contact Page</span></a></li>
-              <li><a class="active" href="blank.html">Blank Page</a></li>
-              <li><a class="" href="404.html">404 Error</a></li>
+              <li><a class="" th:href="@{/countries}">Countries</a></li>
+              <li><a class="" th:href="@{/state}"><span>States</span></a></li>
+              <li><a class="" th:href="@{/location}"><span>Location</span></a></li>             
             </ul>
           </li>
 
@@ -393,14 +406,14 @@
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa fa-bars"></i> Pages</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a th:href="@{/}">Home</a></li>
               <li><i class="fa fa-bars"></i>Pages</li>
               <li><i class="fa fa-square-o"></i>Pages</li>
             </ol>
           </div>
         </div>
         <!-- page start-->
-        <h1>List Of Countries</h1>
+        <h1>List Of Vehicle Make</h1>
         <!-- page end-->
       </section>
     </section>

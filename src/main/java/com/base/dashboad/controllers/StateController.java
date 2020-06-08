@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class StateController {
 	
 	@GetMapping("/state")
-	public String getCountries() {
+	public String getStates() {
 		return "state";
 	}
 
