@@ -190,9 +190,9 @@
               </li>
               <li>
                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/manjiee.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="./img/amol.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Manjiree Nikam</span>
+                                    <span class="from">Amol Kadam</span>
                                     <span class="time">2 hrs</span>
                                     </span>
                                     <span class="message">
@@ -414,6 +414,27 @@
         </div>
         <!-- page start-->
         <h1>List Of Countries</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add Country</button>
+        
+        <font size="5" face="BLUE" >
+        <table style="white-space:nowrap;width:100%;">
+        	<thead>
+        		<tr>
+        			<th class="block" style="width:auto">ID</th>
+        			<th class="block" style="width:auto">Description</th>
+        			<th class="block" style="width:auto">Capital</th>
+        			<th class="block" style="width:auto">Code</th>        			        			
+        		</tr>        		        		
+        	</thead>
+        	<tbody>
+        		<tr th:each="country:${countries}">
+        			<td th:text="${country.id}"></td>
+        			<td th:text="${country.description}"></td>
+        			<td th:text="${country.capital}"></td>
+        			<td th:text="${country.code}"></td>        			
+        		</tr>        	
+        	</tbody>        
+        </table>
         <!-- page end-->
       </section>
     </section>
@@ -426,11 +447,56 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
           -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="https://github.com/yogeshk04">Yogesh Nikam</a>
         </div>
     </div>
   </section>
   <!-- container section end -->
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Country</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form th:action="@{/countries/addNewCountry}" method="post">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Capital:</label>
+            <input type="text" class="form-control" id="recipient-name" name="capital">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Code:</label>
+            <input type="text" class="form-control" id="recipient-name" name="code">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Continent:</label>
+            <input type="text" class="form-control" id="recipient-name" name="continent">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Description:</label>
+            <input type="text" class="form-control" id="recipient-name" name="description">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nationality:</label>
+            <input type="text" class="form-control" id="recipient-name" name="nationality">
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
+  
   <!-- javascripts -->
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
